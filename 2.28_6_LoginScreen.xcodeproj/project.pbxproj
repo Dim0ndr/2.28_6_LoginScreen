@@ -62,10 +62,10 @@
 			children = (
 				A7D72A9028721B73005DC563 /* AppDelegate.swift */,
 				A7D72A9228721B73005DC563 /* SceneDelegate.swift */,
+				A7D72AA628723CE4005DC563 /* GradientView.swift */,
 				A7D72A9428721B73005DC563 /* GreetingsViewController.swift */,
 				A7D72AA428722756005DC563 /* LoginScreenViewController.swift */,
 				A7D72A9628721B73005DC563 /* Main.storyboard */,
-				A7D72AA628723CE4005DC563 /* GradientView.swift */,
 				A7D72A9928721B74005DC563 /* Assets.xcassets */,
 				A7D72A9B28721B74005DC563 /* LaunchScreen.storyboard */,
 				A7D72A9E28721B74005DC563 /* Info.plist */,
