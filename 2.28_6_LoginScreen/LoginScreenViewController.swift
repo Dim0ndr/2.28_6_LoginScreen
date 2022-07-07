@@ -11,16 +11,53 @@ class LoginScreenViewController: UIViewController {
 
     // MARK: - IB Outlets
     
-    @IBOutlet var userName: UITextField!
-    @IBOutlet var password: UITextField!
+    @IBOutlet var userNameTF: UITextField!
+    @IBOutlet var passwordTF: UITextField!
     
-    private let loginName = "Ivan"
-    private let loginPassword = "123"
+    private var person: Person? {
+
+        let users = User.getUsers()
+
+            for user in users {
+                if userNameTF.text == user.login && passwordTF.text == user.password {
+                    return user.person
+                }
+            }
+        return nil
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.overrideUserInterfaceStyle = .light
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
  
-        guard let greetingsVC = segue.destination as? GreetingsViewController else { return  }
-        greetingsVC.userName = loginName
+        guard let tabBarVC = segue.destination as? UITabBarController else { return  }
+        guard let viewControllersTBC = tabBarVC.viewControllers else { return  }
+        
+        for viewControllerTBC in viewControllersTBC {
+            if let viewController = viewControllerTBC as? GreetingsViewController {
+                viewController.userName = loginName
+                viewController.person = person
+            
+            } else if let viewController = viewControllerTBC as? UINavigationController {
+                viewControllerTBC.title = "\(person?.Name ?? "name") \(person?.Surname ?? "user")"
+                let viewControllersNVC = viewController.viewControllers
+                
+                for viewControllerNVC in viewControllersNVC {
+                    if let viewController = viewControllerNVC as? UserInfoViewController {
+                        viewController.person = person
+                        
+                    } else if let viewController = viewControllerNVC as? UserDescriptionViewController {
+                        viewController.person = person
+                    }
+                }
+            }
+        }
+
+        print("prepare for segue login = ", loginName)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -28,19 +65,24 @@ class LoginScreenViewController: UIViewController {
         view.endEditing(true)
     }
     
+    
+    
     // MARK: - IB Actions
     
     @IBAction func loginButtonPressed() {
         
-        guard userName.text == loginName, password.text == loginPassword else {
+        guard let person = person else {
+            print("Wrong user =", userNameTF.text ?? "")
             ShowAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login or password"
             )
             return
         }
+        
+        print("Name successfully checked and =", person.Name)
 
-        performSegue(withIdentifier: "showWelcomeVC", sender: nil)
+        performSegue(withIdentifier: "showWelcomeVC", sender: person)
 
     }
     
@@ -53,8 +95,8 @@ class LoginScreenViewController: UIViewController {
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
 
-        userName.text = ""
-        password.text = ""
+        userNameTF.text = ""
+        passwordTF.text = ""
     }
 }
 
@@ -65,7 +107,7 @@ extension LoginScreenViewController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-            self.password.text = ""
+            self.passwordTF.text = ""
         }
         
         alert.addAction(okAction)

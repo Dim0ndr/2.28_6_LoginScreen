@@ -12,6 +12,7 @@ class GreetingsViewController: UIViewController {
     @IBOutlet var welcomeLabel: UILabel!
     
     var userName = ""
+    var person: Person?
     
     private let firstColor = UIColor(
         red: 210/255,
@@ -29,23 +30,25 @@ class GreetingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.addGradientLayerOf2(
+
+        welcomeLabel.text = String("Welcome, \(userName)!")
+        welcomeLabel.textColor = .white
+    }
+    
+    override func viewDidLayoutSubviews() {
+        view.addGradientLayer(
                 firstColor: firstColor,
                 secondColor: secondColor,
                 startPoint: CGPoint(x: 0, y: 0),
                 endPoint: CGPoint(x: 0, y: 1)
         )
-        
-        welcomeLabel.text = String("Welcome, \(userName)!")
-        welcomeLabel.textColor = .white
     }
     
 }
 
 // MARK: - Set background color
 extension UIView {
-    func addGradientLayerOf2(
+    func addGradientLayer(
             firstColor: UIColor,
             secondColor: UIColor,
             startPoint: CGPoint,
