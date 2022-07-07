@@ -29,7 +29,7 @@ class LoginScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .light
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

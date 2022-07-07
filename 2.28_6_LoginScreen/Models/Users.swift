@@ -16,6 +16,10 @@ struct Person {
     let Surname: String
     let birthYear: Int?
     let description: String?
+    
+    static func getPerson() {
+        
+    }
 }
 
 //let persons = [Person(Name: "Dmitry", Surname: "Karikh", birthYear: 1983)]

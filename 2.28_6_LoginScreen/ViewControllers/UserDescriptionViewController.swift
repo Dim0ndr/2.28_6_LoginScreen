@@ -22,7 +22,7 @@ class UserDescriptionViewController: UIViewController {
         
         navBar.title = "\(person?.Name ?? "name") \(person?.Surname ?? "surname")"
         
-        self.overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .light
         
     }
 

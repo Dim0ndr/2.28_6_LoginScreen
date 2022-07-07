@@ -69,15 +69,6 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		A72C15CD2876126E008BF775 /* Storyboards */ = {
-			isa = PBXGroup;
-			children = (
-				A7D72A9628721B73005DC563 /* Main.storyboard */,
-				A7D72A9B28721B74005DC563 /* LaunchScreen.storyboard */,
-			);
-			path = Storyboards;
-			sourceTree = "<group>";
-		};
 		A72C15CE287612B4008BF775 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +83,15 @@
 				A72C15D028761305008BF775 /* Users.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A72C15D62876EAFD008BF775 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A7D72A9628721B73005DC563 /* Main.storyboard */,
+				A7D72A9B28721B74005DC563 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		A7D72A8428721B73005DC563 = {
@@ -115,7 +115,7 @@
 			children = (
 				A72C15CC2876125B008BF775 /* ViewControllers */,
 				A72C15CF287612CC008BF775 /* Models */,
-				A72C15CD2876126E008BF775 /* Storyboards */,
+				A72C15D62876EAFD008BF775 /* Storyboards */,
 				A72C15CB28761223008BF775 /* App */,
 				A72C15CE287612B4008BF775 /* Resourses */,
 			);

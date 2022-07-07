@@ -27,7 +27,7 @@ class UserInfoViewController: UIViewController {
         userYearOfBirth.text = person?.birthYear?.formatted()
         navBar.title = "\(person?.Name ?? "name") \(person?.Surname ?? "surname")"
         
-        self.overrideUserInterfaceStyle = .light
+        overrideUserInterfaceStyle = .light
         
     }
     
