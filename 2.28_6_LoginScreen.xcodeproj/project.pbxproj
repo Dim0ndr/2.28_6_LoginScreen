@@ -50,6 +50,9 @@
 		A72C15CB28761223008BF775 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				A7D72A9028721B73005DC563 /* AppDelegate.swift */,
+				A7D72A9228721B73005DC563 /* SceneDelegate.swift */,
+				A7D72A9E28721B74005DC563 /* Info.plist */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -57,6 +60,11 @@
 		A72C15CC2876125B008BF775 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				A7D72AA428722756005DC563 /* LoginScreenViewController.swift */,
+				A7D72A9428721B73005DC563 /* GreetingsViewController.swift */,
+				A72C15D2287634C4008BF775 /* UserInfoViewController.swift */,
+				A72C15D428763504008BF775 /* UserDescriptionViewController.swift */,
+				A7D72AA628723CE4005DC563 /* GradientView.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -64,6 +72,8 @@
 		A72C15CD2876126E008BF775 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				A7D72A9628721B73005DC563 /* Main.storyboard */,
+				A7D72A9B28721B74005DC563 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -71,6 +81,7 @@
 		A72C15CE287612B4008BF775 /* Resourses */ = {
 			isa = PBXGroup;
 			children = (
+				A7D72A9928721B74005DC563 /* Assets.xcassets */,
 			);
 			path = Resourses;
 			sourceTree = "<group>";
@@ -78,6 +89,7 @@
 		A72C15CF287612CC008BF775 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A72C15D028761305008BF775 /* Users.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -101,18 +113,6 @@
 		A7D72A8F28721B73005DC563 /* 2.28_6_LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				A7D72AA428722756005DC563 /* LoginScreenViewController.swift */,
-				A7D72A9428721B73005DC563 /* GreetingsViewController.swift */,
-				A72C15D2287634C4008BF775 /* UserInfoViewController.swift */,
-				A72C15D428763504008BF775 /* UserDescriptionViewController.swift */,
-				A7D72AA628723CE4005DC563 /* GradientView.swift */,
-				A72C15D028761305008BF775 /* Users.swift */,
-				A7D72A9628721B73005DC563 /* Main.storyboard */,
-				A7D72A9B28721B74005DC563 /* LaunchScreen.storyboard */,
-				A7D72A9928721B74005DC563 /* Assets.xcassets */,
-				A7D72A9028721B73005DC563 /* AppDelegate.swift */,
-				A7D72A9228721B73005DC563 /* SceneDelegate.swift */,
-				A7D72A9E28721B74005DC563 /* Info.plist */,
 				A72C15CC2876125B008BF775 /* ViewControllers */,
 				A72C15CF287612CC008BF775 /* Models */,
 				A72C15CD2876126E008BF775 /* Storyboards */,
